@@ -1,7 +1,5 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
-import { makeStyles } from "@material-ui/core/styles";
-import Paper from "@material-ui/core/Paper";
 import FoodList from "./FoodList";
 import Details from "./Details";
 
@@ -9,17 +7,18 @@ const style = {
   paper: {
     padding: 20,
     marginBottom: 10,
-    marginTop: 10
+    marginTop: 10,
+    backgroundColor: "whitesmoke"
   }
 };
 
 function Calories() {
   return (
     <Grid container>
-      <Grid item xs={4}>
+      <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
         <Details styles={style} />
       </Grid>
-      <Grid item xs={8}>
+      <Grid item xs={12} sm={12} md={8} lg={8} xl={8}>
         <FoodList styles={style} />
       </Grid>
     </Grid>

@@ -51,7 +51,6 @@ function Header() {
   const classes = useStyles();
 
   return (
-    // <div className={classes.grow}>
     <AppBar position="static">
       <Toolbar>
         <div className={classes.search}>
@@ -67,6 +66,9 @@ function Header() {
             inputProps={{ "aria-label": "search" }}
           />
         </div>
+      </Toolbar>
+      <Toolbar>
+        <Typography variant="h4">Today</Typography>
       </Toolbar>
     </AppBar>
     // </div>
