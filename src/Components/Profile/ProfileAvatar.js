@@ -3,27 +3,25 @@ import Grid from "@material-ui/core/Grid";
 import Avatar from "@material-ui/core/Avatar";
 import Typography from "@material-ui/core/Typography";
 
-const bigAvatar = {
+const picAvatar = {
   height: 70,
   width: 70,
-  margin: 5,
   backgroundColor: "grey",
   textAlign: "center"
 };
 
-const smallAvatar = {
+const numAvatar = {
   height: 50,
   width: 50,
-  margin: 5,
   backgroundColor: "grey",
   textAlign: "center"
 };
 
 export default function ProfileAvatar({ height, weight }) {
   return (
-    <Grid container justify="center" alignItems="center" spacing={5}>
+    <Grid container justify="center" alignItems="center" spacing={2}>
       <Grid item>
-        <Avatar style={smallAvatar}>
+        <Avatar style={numAvatar}>
           <Typography variant="body2">
             {weight}
             kg
@@ -31,10 +29,10 @@ export default function ProfileAvatar({ height, weight }) {
         </Avatar>
       </Grid>
       <Grid item>
-        <Avatar style={bigAvatar} />
+        <Avatar style={picAvatar} />
       </Grid>
       <Grid item>
-        <Avatar style={smallAvatar}>
+        <Avatar style={numAvatar}>
           <Typography variant="body2">
             {height}
             cm

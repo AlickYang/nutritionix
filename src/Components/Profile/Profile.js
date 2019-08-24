@@ -11,7 +11,7 @@ import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
-  root: { flexGrow: 1 }
+  // root: { flexGrow: 1 }
 }));
 
 function Profile() {
@@ -30,7 +30,7 @@ function Profile() {
           </Typography>
         </Grid>
       </Grid>
-      <Divider style={{ marginTop: 30, marginBottom: 30 }} />
+      <Divider style={{ marginTop: 20, marginBottom: 30 }} />
     </Fragment>
   );
 }
