@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import MobileProfile from "../Profile/MobileProfile";
 import { CalorieContext } from "../../Store/Store";
+import DateTab from "./DateTab";
 //Material UI
 import { fade, makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
@@ -29,8 +30,6 @@ function Header() {
               root: classes.inputRoot,
               input: classes.inputInput
             }}
-            display="flex"
-            alignItems="center"
             inputProps={{ "aria-label": "search" }}
           />
         </div>
@@ -42,7 +41,7 @@ function Header() {
       </Hidden>
       <Hidden only="xs">
         <Toolbar>
-          <Typography variant="h4">Today</Typography>
+          <DateTab />
         </Toolbar>
       </Hidden>
     </AppBar>

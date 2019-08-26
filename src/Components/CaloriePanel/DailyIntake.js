@@ -1,32 +1,29 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useContext } from "react";
+//Store
+import { CalorieContext, DateContext } from "../../Store/Store";
+import SumDailyIntake from "./SumIntake";
+import CaloriesConsumed from "./CaloriesConsumed";
+//UI
 import DailyIntakeProgressBar from "./DailyIntakeProgressBar";
 import DailyIntakeBreakdown from "./DailyIntakeBreakdown";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 
 function DailyIntake() {
+  const [data, setData] = useContext(CalorieContext);
+  const [dateSelected, setDateSelected] = useContext(DateContext);
+  let index;
+  dateSelected === 0 ? (index = 2) : (index = dateSelected % 2);
+  const { breakdown, totalIntake } = SumDailyIntake(
+    data.data_points[index].intake_list
+  );
+  console.log(breakdown);
+
   return (
     <Fragment>
-      <Grid container>
-        <Grid item sm={6}>
-          <Typography variant="h4" align="left">
-            1289 cal
-          </Typography>
-          <Typography variant="caption" align="left">
-            consumed
-          </Typography>
-        </Grid>
-        <Grid item sm={6}>
-          <Typography variant="h4" align="right">
-            1500 cal
-          </Typography>
-          <Typography variant="caption" style={{ float: "right" }}>
-            daily goal
-          </Typography>
-        </Grid>
-      </Grid>
-      <DailyIntakeProgressBar />
-      <DailyIntakeBreakdown />
+      <CaloriesConsumed calories={totalIntake} />
+      <DailyIntakeProgressBar total={totalIntake} />
+      <DailyIntakeBreakdown breakdown={breakdown} />
     </Fragment>
   );
 }
