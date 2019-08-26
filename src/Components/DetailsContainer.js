@@ -5,14 +5,14 @@ import Profile from "./Profile/Profile";
 import DailyIntake from "./CaloriePanel/DailyIntake";
 
 const detailsStyle = {
-  height: 900,
+  height: "100%",
   padding: 20,
   marginBottom: 10,
   marginTop: 10,
   backgroundColor: "whitesmoke"
 };
 
-function Details() {
+function DetailsContainer() {
   return (
     <Paper style={detailsStyle}>
       <Hidden only="xs">
@@ -22,4 +22,4 @@ function Details() {
     </Paper>
   );
 }
-export default Details;
+export default DetailsContainer;
