@@ -43,7 +43,7 @@ const SumDailyIntake = intake_list => {
     });
   }
 
-  console.log(breakdown);
+  // console.log(breakdown);
 
   // if (breakdown.length === 0) {
   //   console.log("breakdown.len = 0");
@@ -59,8 +59,8 @@ const SumDailyIntake = intake_list => {
     return Math.round(meal.nf_calories * meal.serving_size) + total;
   }, 0);
   //Total calories
-  console.log(breakdown);
-  console.log(totalIntake);
+  // console.log(breakdown);
+  // console.log(totalIntake);
   return { breakdown, totalIntake };
 };
 

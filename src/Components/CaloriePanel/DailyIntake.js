@@ -17,7 +17,7 @@ function DailyIntake() {
   const { breakdown, totalIntake } = SumDailyIntake(
     data.data_points[index].intake_list
   );
-  console.log(breakdown);
+  // console.log(breakdown);
 
   return (
     <Fragment>

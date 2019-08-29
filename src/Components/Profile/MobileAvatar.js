@@ -30,22 +30,25 @@ function MobileAvatar({ first_name, weight, height }) {
         direction="row"
         justify="center"
         alignItems="center"
-        spacing={2}
+        spacing={1}
       >
-        <Grid item xs={6}>
+        <Grid item wrap="nowrap">
           <Avatar style={picAvatar} />
           <Typography variant="h5">{first_name}</Typography>
         </Grid>
-        <Avatar style={numAvatar}>
-          <Typography variant="body2">
-            {weight}
-            kg
-          </Typography>
-        </Avatar>
-        <Avatar style={numAvatar}>
-          <Typography variant="body2">{height}</Typography>
-          <Typography variant="body2">cm</Typography>
-        </Avatar>
+        <Grid item xs={4} />
+        <Grid item wrap="nowrap">
+          <Avatar style={numAvatar}>
+            <Typography variant="body2">
+              {weight}
+              kg
+            </Typography>
+          </Avatar>
+          <Avatar style={numAvatar}>
+            <Typography variant="body2">{height} cm</Typography>
+          </Avatar>
+        </Grid>
+        {/* </Grid> */}
       </Grid>
     </Fragment>
   );

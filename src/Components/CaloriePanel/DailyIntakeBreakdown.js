@@ -15,7 +15,7 @@ function DailyIntakeBreakdown({ breakdown }) {
         }}
       >
         {breakdown.map(meal => (
-          <DailyIntakeBreakdownItem breakdownItem={meal} />
+          <DailyIntakeBreakdownItem breakdownItem={meal} key={meal.meal_type} />
         ))}
       </List>
     </Fragment>

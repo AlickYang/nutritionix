@@ -3,15 +3,6 @@ import Grid from "@material-ui/core/Grid";
 import FoodListContainer from "./FoodListContainer";
 import DetailsContainer from "./DetailsContainer";
 
-const style = {
-  // paper: {
-  //   padding: 20,
-  //   marginBottom: 10,
-  //   marginTop: 10,
-  //   backgroundColor: "whitesmoke"
-  // }
-};
-
 function Calories() {
   return (
     <Grid container>

@@ -14,7 +14,7 @@ function FoodList() {
     <div>
       <List>
         {intake_list.map(item => (
-          <FoodListItem details={item} />
+          <FoodListItem details={item} key={item.name} />
         ))}
       </List>
     </div>

@@ -1,5 +1,6 @@
 import React, { Fragment, useState, useContext } from "react";
 import Typography from "@material-ui/core/Typography";
+import Container from "@material-ui/core/Container";
 import KeyboardArrowLeft from "@material-ui/icons/KeyboardArrowLeft";
 import KeyboardArrowRight from "@material-ui/icons/KeyboardArrowRight";
 import moment from "moment";
@@ -34,7 +35,11 @@ function DateTab() {
       <IconButton onClick={onLeftClick}>
         <KeyboardArrowLeft />
       </IconButton>
-      <Typography variant="h4">{selected[dateSelected]}</Typography>
+      <Container fixed>
+        <Typography variant="h4" align="center">
+          {selected[dateSelected]}
+        </Typography>
+      </Container>
       <IconButton onClick={onRightClick}>
         <KeyboardArrowRight />
       </IconButton>
